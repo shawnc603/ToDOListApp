@@ -1,0 +1,31 @@
+{% extends "layout.html" %}
+{% block body %} 
+<div class="container">
+    <div class="row">
+        <div class="col-md-4 col-md-offset-4">
+            <div id="frmAddTask" >
+                <div class="form-group">
+                    <label for="task">Task Header:</label>
+                    <input type="task" class="form-control" name="task" placeholder="Enter task Header">
+                </div>
+                <div class="form-group">
+                    <label for="date">Date to be completed:</label>
+                    <input type="date" class="form-control" name="date" placeholder="Enter Date">
+                </div>
+                <div class="form-group">
+                    <label for="priority">Priority:</label>
+                    <input type="priority" class="form-control" name="priority" placeholder="Enter Priority 1,2 or 3">
+                </div>
+                <div class="form-group">
+                    <label for="description">Task Description: </label>
+                    <textarea class="form-control rounded-0" name="description" placeholder="Enter Description" rows="10"></textarea>
+                </div>
+                <button id="SubmitTasks" type="button" class="btn btn-primary" btn-block" onclick="SubmitTasks()">Submit</button>
+            </div>
+            <div id="sucessAlert" class="alert alert-sucess" role= "alert" style="display:none;"></div>
+            <div id="errorAlert" class="alert alert-danger" role="alert" style="display:none;"></div>
+            <br>
+        </div>
+    </div>
+</div>
+{% endblock %}

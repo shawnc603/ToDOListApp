@@ -1,0 +1,35 @@
+{% extends "layout.html" %}
+<section class="container">
+{% block body %}
+<div class="container text-center">    
+  <h3></h3><br>
+  <div class="row">
+    <div class="col-sm-4">
+      <a href="{{ url_for('tasks.registerTask') }}"><img src="static/images/button_play1.png" class="img-responsive" style="width:80%" alt="Image"/></a>
+      <p>Register Task</p>
+    </div>
+    <div class="col-sm-4"> 
+      <a href="{{ url_for('search.searchTasks') }}"><img src="static/images/button-play2.png" class="img-responsive" style="width:80%" alt="Image"/></a>
+      <p>Search Tasks</p>    
+    </div>
+    <div class="col-sm-4">
+      <a href="{{ url_for('sms.smsHome') }}"><img src="static/images/button_play3.png" class="img-responsive" style="width:80%" alt="Image"/></a>
+      <p>Send SMS / Email</p> 
+    </div>
+    <div class="col-sm-4">
+      <a href="{{ url_for('tasks.displayTasks') }}"><img src="static/images/button_play5.png" class="img-responsive" style="width:80%" alt="Image"/></a>
+      <p>Display Tasks</p>
+    </div>
+    <div class="col-sm-4">
+      <a href="{{ url_for('tasks.displayTasks') }}"><img src="static/images/button_play4.png" class="img-responsive" style="width:80%" alt="Image"/></a>
+      <p>Display Tasks</p> 
+    </div>
+    <div class="col-sm-4">
+      <a href="{{ url_for('tasks.displayTasks') }}"><img src="static/images/button_play6.png" class="img-responsive" style="width:80%" alt="Image"/></a>
+      <p>Display Tasks</p>
+    </div>
+  </div>
+</div>
+<br>
+</section>
+{% endblock %}

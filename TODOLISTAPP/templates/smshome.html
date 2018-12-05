@@ -1,0 +1,33 @@
+{% extends "layout.html" %}
+{% block body %} 
+<div class="container">
+    <div class="row">
+    <div id="frmEmail" class="col-md-4 col-md-offset-4">
+        <div>
+            <br>
+        </div>
+        <div id="radioTransportType" >
+            <label class="radio-inline">
+            <input type="radio" name="transport_type" checked>email</label>
+            <label class="radio-inline">
+            <input type="radio" name="transport_type">sms</label>
+        </div>
+        <div>
+            <br>
+        </div>
+        <div class="form-group">
+            <label for="recipient_email_phonenum">Recipient Email / Phone Number:</label>
+            <input type="recipient_email_phonenum" class="form-control" name="recipient_email_phonenum" placeholder="Enter recipient info...">
+        </div>
+        <div class="form-group">
+            <label for="email_sms_message">Email / SMS Description: </label>
+            <textarea class="form-control rounded-0" name="email_sms_message" placeholder="Enter description ..." rows="15"></textarea>
+        </div>
+        <button  type="button" class="btn btn-primary" btn-block" onclick="sendEmail()">Submit</button>            
+    </div>
+    <div id="sucessAlert" class="alert alert-sucess" role= "alert" style="display:none;"></div>
+    <div id="errorAlert" class="alert alert-danger" role="alert" style="display:none;"></div>
+    <br>
+    </div>
+</div>
+{% endblock %}
